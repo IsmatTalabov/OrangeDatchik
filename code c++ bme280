@@ -1,0 +1,20 @@
+#include <GyverBME280.h>                      
+GyverBME280 bme;                              
+
+void setup() {
+  Serial.begin(9600);                        
+  bme.begin();                              
+}
+
+void loop() {
+  Serial.print("Temperature: ");
+  Serial.print(bme.readTemperature());        // темперутура в [*C]
+  Serial.println(" *C");
+  
+  
+   float pressure = bme.readPressure();        // давление в [Па]
+  Serial.print("Pressure: ");
+  
+   delay(1000)
+   
+   }
